@@ -6,6 +6,6 @@ import { Injectable } from '@angular/core';
 
 export class EmailService{
     getEmails(){
-        return ["nagi @123","bargav@123"];
+        return ["nagendra@123","gopi@123"];
     };
 }
