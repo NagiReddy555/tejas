@@ -1,0 +1,31 @@
+<div class="container">
+
+
+    <input type="search" class="form-control" placeholder="search name"   [(ngModel)]="searchText"    />
+    <h1>{{searchText}}</h1>
+
+
+    <table class="table table-bordered hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>name</th>
+                <th>id</th>
+                <th>age</th>
+                <th>company</th>
+                <th>doj</th>
+                <th>gender</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr *ngFor="let emp of employeeData | filter:searchText">
+                <td>{{emp.empname |uppercase}}</td>
+                <td class="badge badge-primary badge-sm">{{emp.empid}}</td>
+                <td>{{emp.empage}}</td>
+                <td>{{emp.empcompany |titlecase}}</td>
+                <td>{{emp.empdoj | date}}</td>
+                <td>{{emp.gender}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
